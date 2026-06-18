@@ -1,0 +1,26 @@
+import java.util.Scanner;
+import java.util.Arrays;
+public class Main {
+public static void main(String[] args) {
+Scanner sc = new Scanner(System.in);
+String str = sc.next();
+String str1 = sc.next();
+int len = str.length();
+int len1 = str1.length();
+if (len != len1) {
+System.out.println("invalid");
+return;
+}
+char[] A = str.toLowerCase().toCharArray();
+char[] B = str1.toLowerCase().toCharArray();
+Arrays.sort(A);
+Arrays.sort(B);
+if (Arrays.equals(A, B)) {
+System.out.println("Anagrams");
+} else {
+System.out.println("Not Anagrams");
+
+}
+sc.close();
+}
+}
